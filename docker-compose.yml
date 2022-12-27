@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  ubuntu:
+    build: ./Ubuntu
+    stdin_open: true
+    image: nickpartas/sheva_docker_exam-ubuntu:latest
+
+  web:
+    build: ./Nginx
+    ports:
+      - 8080:80
+    image: nickpartas/sheva_docker_exam-web:latest 
